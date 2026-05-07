@@ -22,6 +22,18 @@ imports:
 # version
 schema-oas30-downcompile: False
 
+# Viewer configuration (optional)
+#
+# viewer:
+#   show-imported-depth: 0  # Controls which imported building blocks are shown in the viewer.
+#                           #   0 (default): only local building blocks
+#                           #   N (positive integer): local + imported up to N levels deep
+#                           #   -1 (any negative number): show all imported building blocks
+#                           # This setting is written to register.json and used by the viewer
+#                           # whether it is deployed via GitHub Pages or run locally against
+#                           # the register. It takes precedence over the viewer_show_imported
+#                           # GitHub workflow input (which is now deprecated).
+
 # SPARQL configuration (optional)
 #   Authentication can be set through the sparql_username and sparql_password GitHub Workflow inputs
 #   (see .github/workflow/process-bblocks.yml)
