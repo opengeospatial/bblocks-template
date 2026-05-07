@@ -1,0 +1,156 @@
+{
+  "name": "My OGC Building Blocks repository",
+  "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
+  "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
+  "modified": "2026-05-07T11:37:21.546445",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"6c782d91e288340ba681da9c977d75a37c22b8b7",
+      "shortCommitId": "\"6c782d",
+      "date": "2026-05-07T11:32:58+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/opengeospatial/bblocks-template",
+  "gitHubRepository": "https://github.com/opengeospatial/bblocks-template/blob/master/",
+  "baseURL": "https://opengeospatial.github.io/bblocks-template/",
+  "viewerURL": "https://opengeospatial.github.io/bblocks-template/",
+  "validationReport": "https://opengeospatial.github.io/bblocks-template/build/tests/report.html",
+  "validationReportJson": "https://opengeospatial.github.io/bblocks-template/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.bbr.template.mySchema",
+      "$schema": "metaschema.yaml",
+      "name": "My Schema",
+      "abstract": "An example schema defining the set of properties of any type of object.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "Sample source document",
+          "link": "https://example.com/sources/1"
+        }
+      ],
+      "tags": [
+        "templates"
+      ],
+      "shaclShapes": {
+        "ogc.bbr.template.mySchema": [
+          "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
+        ]
+      },
+      "ldContext": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld",
+      "dateOfLastChange": "2023-04-05",
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.json"
+      },
+      "sourceSchema": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/schema.yaml",
+      "sourceLdContext": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/context.jsonld",
+      "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/resolvedProperties.json",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/opengeospatial/bblocks-template/blob/master/build/tests/bbr/template/mySchema/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/mySchema/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/markdown/bbr/template/mySchema/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks-template/bblock/ogc.bbr.template.mySchema"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.bbr.template.myFeature",
+      "name": "Custom Feature",
+      "abstract": "This examples shows a simple customisation for OGC API Feature schemas",
+      "status": "under-development",
+      "dateTimeAddition": "2023-05-19T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-examples",
+      "version": "1.0",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
+          "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+        }
+      ],
+      "dependsOn": [
+        "ogc.bbr.template.mySchema",
+        "ogc.geo.features.feature"
+      ],
+      "tags": [
+        "feature",
+        "examples"
+      ],
+      "group": "Examples",
+      "highlighted": true,
+      "shaclShapes": {
+        "ogc.bbr.template.mySchema": [
+          "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ]
+      },
+      "dateOfLastChange": "2023-05-19",
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/schema.json"
+      },
+      "sourceSchema": "https://opengeospatial.github.io/bblocks-template/_sources/myFeature/schema.yaml",
+      "ldContext": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld",
+      "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/resolvedProperties.json",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks-template/_sources/myFeature/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/opengeospatial/bblocks-template/blob/master/build/tests/bbr/template/myFeature/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/myFeature/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/markdown/bbr/template/myFeature/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks-template/bblock/ogc.bbr.template.myFeature"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://opengeospatial.github.io/bblocks-template/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://opengeospatial.github.io/bblocks-template/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://opengeospatial.github.io/bblocks-template/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://opengeospatial.github.io/bblocks-template/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}

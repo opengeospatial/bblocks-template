@@ -1,0 +1,92 @@
+
+
+{
+  "itemIdentifier": "ogc.bbr.template.mySchema",
+  "$schema": "metaschema.yaml",
+  "name": "My Schema",
+  "abstract": "An example schema defining the set of properties of any type of object.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "sources": [
+    {
+      "title": "Sample source document",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "tags": [
+    "templates"
+  ],
+  "shaclShapes": {
+    "ogc.bbr.template.mySchema": [
+      "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
+    ]
+  },
+  "ldContext": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld",
+  "dateOfLastChange": "2023-04-05",
+  "schema": {
+    "application/yaml": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.json"
+  },
+  "sourceSchema": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/schema.yaml",
+  "sourceLdContext": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/context.jsonld",
+  "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/resolvedProperties.json",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/opengeospatial/bblocks-template/blob/master/build/tests/bbr/template/mySchema/",
+  "description": "## My Schema\n\nDefines a set of properties that may be used in **any** JSON schema.\n\n> Note these properties may be used in the \"properties\" sub-component of a GeoJSON object, as a simple object\n\nThe numeric properties \"b\" and \"c\" have an example SHACL rule that if c is present, then c > b",
+  "examples": [
+    {
+      "title": "This is an example with just a description and no code snippets.",
+      "content": "This an example.\n\nIn **Markdown** format.",
+      "prefixes": {
+        "mynamespace": "http://example.com/mythings/"
+      },
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/example.json",
+          "code": "{\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}\n\n",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld\"\n  ],\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix mynamespace: <http://example.com/mythings/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a mynamespace:aThing ;\n    ns1:b 23 ;\n    ns1:c 1 .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Examples can have content and/or code snippets.",
+      "content": "The content of this example. ",
+      "snippets": [
+        {
+          "language": "shell",
+          "code": "echo 'Hello, world!'",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_1.shell"
+        },
+        {
+          "language": "python",
+          "code": "print('Hello, world!')",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_2.python"
+        },
+        {
+          "language": "javascript",
+          "code": "console.log('Hello, world!')",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_3.javascript"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: My example schema\ntype: object\nproperties:\n  a:\n    type: string\n    format: uri\n    x-jsonld-id: '@type'\n  b:\n    type: number\n    x-jsonld-id: https://example.org/my-bb-model/b\n  c:\n    type: number\n    x-jsonld-id: https://example.org/my-bb-model/c\nrequired:\n- a\n- b\n",
+  "gitRepository": "https://github.com/opengeospatial/bblocks-template",
+  "gitPath": "_sources/mySchema"
+}

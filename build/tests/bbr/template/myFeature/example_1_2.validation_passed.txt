@@ -1,0 +1,10 @@
+Validation report for ogc.bbr.template.myFeature - Custom Feature
+Generated 2026-05-07T11:37:22.633900+00:00
+=== Files ===
+Using example_1_2.yaml from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

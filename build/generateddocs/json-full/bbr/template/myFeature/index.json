@@ -1,0 +1,87 @@
+
+
+{
+  "itemIdentifier": "ogc.bbr.template.myFeature",
+  "name": "Custom Feature",
+  "abstract": "This examples shows a simple customisation for OGC API Feature schemas",
+  "status": "under-development",
+  "dateTimeAddition": "2023-05-19T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+    }
+  ],
+  "dependsOn": [
+    "ogc.bbr.template.mySchema",
+    "ogc.geo.features.feature"
+  ],
+  "tags": [
+    "feature",
+    "examples"
+  ],
+  "group": "Examples",
+  "highlighted": true,
+  "shaclShapes": {
+    "ogc.bbr.template.mySchema": [
+      "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
+    ],
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ]
+  },
+  "dateOfLastChange": "2023-05-19",
+  "schema": {
+    "application/yaml": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/schema.json"
+  },
+  "sourceSchema": "https://opengeospatial.github.io/bblocks-template/_sources/myFeature/schema.yaml",
+  "ldContext": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld",
+  "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/resolvedProperties.json",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks-template/_sources/myFeature/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/opengeospatial/bblocks-template/blob/master/build/tests/bbr/template/myFeature/",
+  "description": "## Custom Feature Type \n\nThis building block illustrates a typical \"Feature Type\" - where an object is modelled as a \"Feature with geometry\", but has its own \"native schema\" - or \"domain model\".\n\nThis is an **interoperable** approach to defining a Feature, allowing re-use of a well-defined domain model.\n\ni.e. the attributes (properties) are managed independently of the packaging container (Feature) \n\nthe **mySchema\" building block is referenced by this container, complete with an example of semantic annotations for the domain model.  It may inherit reusable sub-components using the same mechanisms - after all there is usually a lot in common across a range of FeatureTypes in any environment.  \n\nThis building block **inherits** reusable semantic annotations from a common library, simplifying implementation. \n\n\n\n",
+  "examples": [
+    {
+      "title": "GeoJSON - specialisation example.",
+      "content": "This examples shows how to define a customised schema based on an existing building block - in this case the *OGC API Features* basic GeoJSON Feature response",
+      "base-uri": "http://example.com/features/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://opengeospatial.github.io/bblocks-template/_sources/myFeature/examples/feature.json",
+          "code": "{\n  \"@context\": {\n    \"mynamespace\": \"http://example.org/ns1/\"\n  },\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862874\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}\n",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.json"
+        },
+        {
+          "language": "yaml",
+          "code": "id: 16\ntype: Feature\ngeometry: null\nproperties:\n  a: mynamespace:aThing\n  b: 23\n  c: 0.1\n",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_2.yaml"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld\",\n    {\n      \"mynamespace\": \"http://example.org/ns1/\"\n    }\n  ],\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862875\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.com/features/f1> a mynamespace:aThing,\n        geojson:Feature ;\n    ns1:b 23 ;\n    ns1:c 1e-01 ;\n    geojson:geometry [ a geojson:LineString ;\n            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.ttl"
+        }
+      ],
+      "prefixes": {
+        "mynamespace": "http://example.com/mythings/"
+      }
+    }
+  ],
+  "examplePrefixes": {
+    "mynamespace": "http://example.com/mythings/"
+  },
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Example of a simple GeoJSON Feature specialisation\n$defs:\n  MyFeature:\n    allOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n    - properties:\n        properties:\n          $ref: https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.yaml\nanyOf:\n- $ref: '#/$defs/MyFeature'\n",
+  "gitRepository": "https://github.com/opengeospatial/bblocks-template",
+  "gitPath": "_sources/myFeature"
+}

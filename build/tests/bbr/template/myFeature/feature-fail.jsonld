@@ -1,0 +1,21 @@
+{
+  "@context": "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld",
+  "id": "f1",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ],
+      [
+        -111.71,
+        40.156709946862875
+      ]
+    ]
+  },
+  "properties": {
+    "notMyProp": "Mandatory property not present example"
+  }
+}

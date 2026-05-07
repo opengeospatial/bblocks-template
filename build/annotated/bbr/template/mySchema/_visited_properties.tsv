@@ -1,0 +1,4 @@
+path	@id	schema
+/a	@type	/github/workspace/build/annotated/bbr/template/mySchema/schema.yaml
+/b	https://example.org/my-bb-model/b	/github/workspace/build/annotated/bbr/template/mySchema/schema.yaml
+/c	https://example.org/my-bb-model/c	/github/workspace/build/annotated/bbr/template/mySchema/schema.yaml

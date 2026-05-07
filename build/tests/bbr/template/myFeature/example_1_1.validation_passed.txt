@@ -1,0 +1,34 @@
+Validation report for ogc.bbr.template.myFeature - Custom Feature
+Generated 2026-05-07T11:37:22.633078+00:00
+=== Files ===
+Using examples/feature.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/mySchema/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/mySchema/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: <http://example.com/features/f1>
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+
+=== End SHACL ===
+

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld",
+    {
+      "mynamespace": "http://example.org/ns1/"
+    }
+  ],
+  "a": "mynamespace:aThing",
+  "b": 23,
+  "c": 25.5
+}

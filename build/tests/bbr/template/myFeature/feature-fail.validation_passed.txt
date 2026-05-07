@@ -1,0 +1,55 @@
+Validation report for ogc.bbr.template.myFeature - Custom Feature
+Generated 2026-05-07T11:37:22.623174+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using feature-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD feature-fail.jsonld created
+Output Turtle feature-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'id': 'f1', 'type': 'Feature', 'geometry': {'type': 'LineString', 'coordinates': [[-111.67183507997295, 40.056709946862874], [-111.71, 40.156709946862875]]}, 'properties': {'notMyProp': 'Mandatory property not present example'}} is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema:
+    {'$defs': {'MyFeature': {'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml'},
+                                       {'properties': {'properties': {'$ref': 'https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.yaml'}}}]}},
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'anyOf': [{'$ref': '#/$defs/MyFeature'}],
+     'description': 'Example of a simple GeoJSON Feature specialisation'}
+
+On instance:
+    {'geometry': {'coordinates': [[-111.67183507997295, 40.056709946862874],
+                                  [-111.71, 40.156709946862875]],
+                  'type': 'LineString'},
+     'id': 'f1',
+     'properties': {'notMyProp': 'Mandatory property not present example'},
+     'type': 'Feature'}
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/mySchema/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/mySchema/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: *none*
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: <file:///github/workspace/f1>
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+
+=== End SHACL ===
+
