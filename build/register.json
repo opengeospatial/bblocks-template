@@ -2,12 +2,12 @@
   "name": "My OGC Building Blocks repository",
   "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2026-05-07T11:37:21.546445",
+  "modified": "2026-06-25T14:10:18.505013",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"6c782d91e288340ba681da9c977d75a37c22b8b7",
-      "shortCommitId": "\"6c782d",
-      "date": "2026-05-07T11:32:58+00:00\""
+      "commitId": "\"63a70437bf8124dfddbdd444f28013fb2c0ecb1f",
+      "shortCommitId": "\"63a704",
+      "date": "2026-06-25T13:38:32+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks-template",
@@ -58,13 +58,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks-template/blob/master/build/tests/bbr/template/mySchema/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/mySchema/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/markdown/bbr/template/mySchema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/mySchema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -88,8 +88,8 @@
         }
       ],
       "dependsOn": [
-        "ogc.bbr.template.mySchema",
-        "ogc.geo.features.feature"
+        "bblocks://ogc.bbr.template.mySchema",
+        "bblocks://ogc.geo.features.feature"
       ],
       "tags": [
         "feature",
@@ -117,13 +117,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks-template/blob/master/build/tests/bbr/template/myFeature/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/myFeature/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/markdown/bbr/template/myFeature/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/myFeature/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",

@@ -54,23 +54,23 @@
         {
           "language": "json",
           "ref": "https://opengeospatial.github.io/bblocks-template/_sources/myFeature/examples/feature.json",
-          "code": "{\n  \"@context\": {\n    \"mynamespace\": \"http://example.org/ns1/\"\n  },\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862874\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}\n",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.json",
+          "code": "{\n  \"@context\": {\n    \"mynamespace\": \"http://example.org/ns1/\"\n  },\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862874\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}\n"
         },
         {
           "language": "yaml",
-          "code": "id: 16\ntype: Feature\ngeometry: null\nproperties:\n  a: mynamespace:aThing\n  b: 23\n  c: 0.1\n",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_2.yaml"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_2.yaml",
+          "code": "id: 16\ntype: Feature\ngeometry: null\nproperties:\n  a: mynamespace:aThing\n  b: 23\n  c: 0.1\n"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld\",\n    {\n      \"mynamespace\": \"http://example.org/ns1/\"\n    }\n  ],\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862875\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.jsonld",
+          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld\",\n    {\n      \"mynamespace\": \"http://example.org/ns1/\"\n    }\n  ],\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862875\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}"
         },
         {
           "language": "ttl",
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.com/features/f1> a mynamespace:aThing,\n        geojson:Feature ;\n    ns1:b 23 ;\n    ns1:c 1e-01 ;\n    geojson:geometry [ a geojson:LineString ;\n            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/myFeature/example_1_1.ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.com/features/f1> a mynamespace:aThing,\n        geojson:Feature ;\n    ns1:b 23 ;\n    ns1:c 1e-01 ;\n    geojson:geometry [ a geojson:LineString ;\n            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .\n\n"
         }
       ],
       "prefixes": {

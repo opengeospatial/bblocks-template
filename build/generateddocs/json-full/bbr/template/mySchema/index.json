@@ -49,18 +49,18 @@
         {
           "language": "json",
           "ref": "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/example.json",
-          "code": "{\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}\n\n",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.json",
+          "code": "{\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}\n\n"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld\"\n  ],\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.jsonld",
+          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld\"\n  ],\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}"
         },
         {
           "language": "ttl",
-          "code": "@prefix mynamespace: <http://example.com/mythings/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a mynamespace:aThing ;\n    ns1:b 23 ;\n    ns1:c 1 .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_1_1.ttl",
+          "code": "@prefix mynamespace: <http://example.com/mythings/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a mynamespace:aThing ;\n    ns1:b 23 ;\n    ns1:c 1 .\n\n"
         }
       ]
     },
@@ -70,18 +70,18 @@
       "snippets": [
         {
           "language": "shell",
-          "code": "echo 'Hello, world!'",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_1.shell"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_1.shell",
+          "code": "echo 'Hello, world!'"
         },
         {
           "language": "python",
-          "code": "print('Hello, world!')",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_2.python"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_2.python",
+          "code": "print('Hello, world!')"
         },
         {
           "language": "javascript",
-          "code": "console.log('Hello, world!')",
-          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_3.javascript"
+          "url": "https://opengeospatial.github.io/bblocks-template/build/tests/bbr/template/mySchema/example_2_3.javascript",
+          "code": "console.log('Hello, world!')"
         }
       ]
     }
