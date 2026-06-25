@@ -2,7 +2,7 @@
   "name": "My OGC Building Blocks repository",
   "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2026-06-25T14:10:18.505013",
+  "modified": "2026-06-25T14:19:50.583326",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"63a70437bf8124dfddbdd444f28013fb2c0ecb1f",
@@ -88,8 +88,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.bbr.template.mySchema",
-        "bblocks://ogc.geo.features.feature"
+        "bblocks://ogc.geo.features.feature",
+        "bblocks://ogc.bbr.template.mySchema"
       ],
       "tags": [
         "feature",
@@ -98,11 +98,11 @@
       "group": "Examples",
       "highlighted": true,
       "shaclShapes": {
-        "ogc.bbr.template.mySchema": [
-          "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
-        ],
         "ogc.geo.features.feature": [
           "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.bbr.template.mySchema": [
+          "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
         ]
       },
       "dateOfLastChange": "2023-05-19",

@@ -16,8 +16,8 @@
     }
   ],
   "dependsOn": [
-    "ogc.bbr.template.mySchema",
-    "ogc.geo.features.feature"
+    "ogc.geo.features.feature",
+    "ogc.bbr.template.mySchema"
   ],
   "tags": [
     "feature",
@@ -26,11 +26,11 @@
   "group": "Examples",
   "highlighted": true,
   "shaclShapes": {
-    "ogc.bbr.template.mySchema": [
-      "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
-    ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ],
+    "ogc.bbr.template.mySchema": [
+      "https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl"
     ]
   },
   "dateOfLastChange": "2023-05-19",
