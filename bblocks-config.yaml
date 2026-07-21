@@ -45,3 +45,17 @@ schema-oas30-downcompile: False
 #   query: https://example.com/sparql       # SPARQL query endpoint where data will be available
 #   resources:                              # Additional resources to upload apart from building block metadata
 #      ontologies: true                     #   Whether to upload ontology files to the triplestore
+
+# External transformer/validator plugins (optional)
+#   Each entry installs its pip dependencies into a sandbox and imports the given modules,
+#   which are scanned for plugin classes. Unless the postprocessor is run with
+#   --skip-permissions=true, you will be prompted before plugin code is installed/run.
+#
+# plugins:
+#   transforms:
+#     - modules: [my.custom.Transformer]     # Dotted Python module path(s) to import
+#       pip: [my-custom-package]             # pip install specifier(s) for the module(s)
+#       url: https://example.com/my-plugin   # Optional: plugin homepage/repo (auto-derived from pip if omitted)
+#   validators:
+#     - modules: [my.custom.Validator]
+#       pip: [my-custom-package]
