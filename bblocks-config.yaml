@@ -82,3 +82,10 @@ schema-oas30-downcompile: False
 #   validators:
 #     - modules: [my.custom.Validator]
 #       pip: [my-custom-package]
+#   build:                                   # Lifecycle-hook plugins (before_run, before/after_bblock,
+#                                             #   after_register, after_uplift, after_run, on_error),
+#                                             #   run locally and in CI alike.
+#     - classes: [my.custom.BuildHooks]      # Fully-qualified module.ClassName(s) - used exactly as
+#                                             #   given, not scanned like transforms/validators' "modules"
+#       pip: [my-custom-package]
+#       url: https://example.com/my-plugin
