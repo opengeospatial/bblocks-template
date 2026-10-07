@@ -89,3 +89,9 @@ schema-oas30-downcompile: False
 #                                             #   given, not scanned like transforms/validators' "modules"
 #       pip: [my-custom-package]
 #       url: https://example.com/my-plugin
+#       id: strict                           # Optional: [A-Za-z0-9_-]+; lets the same class be declared more
+#                                             #   than once (each (class, id) must be unique); passed to the
+#                                             #   plugin as context['pluginId']
+#       config:                              # Optional: JSON-serializable mapping, passed to the constructor of
+#         threshold: 3                       #   every class in this entry. Not published in register.json.
+#                                             #   Do not put secrets here - this file is committed to git.
