@@ -289,10 +289,8 @@ docker run -it --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" \
 To test changes to a register that this one imports (directly or through other registers) before they are
 published:
 
-1. In the **upstream** checkout, run `./build-local.sh`. It builds into `build-local/` like `build.sh`, but
-   with the register's public base URL (autodetected from the git remote) instead of the viewer URL, so that
-   other registers can consume the output. When working on a fork, pass the original register's URL:
-   `./build-local.sh --base-url https://opengeospatial.github.io/upstream-register/`.
+1. In the **upstream** checkout, run `./build.sh` as usual. Its `build-local/` output stays viewable in the
+   upstream's own viewer.
 2. In **this** repository, create `bblocks-config-local.yml` mapping the upstream's public URL to a local
    path, and a `.volumes` file mounting the upstream checkout at that path (both are ignored by git):
 
@@ -304,11 +302,14 @@ published:
    ```
    ../upstream-register:/imports/upstream-register
    ```
+   Map the URL this repository imports (from its `bblocks-config.yaml`), even when the upstream checkout is a
+   fork.
 3. Run `./build.sh` as usual. The postprocessor picks up `build-local/register.json` from the mapped
-   checkout whenever it is newer than the published register.
+   checkout whenever it is newer than the published register, and rewrites the local build's viewer URLs
+   (`http://localhost:9090/register/...`) to the mapped URL, so the same mapping resolves them.
 
 If the change is in a register imported *through* another one, rebuild each register in between with
-`./build-local.sh` too, and add a mapping and volume for every one of them: their published outputs were
+`./build.sh` too, and add a mapping and volume for every one of them: their published outputs were
 generated against the old upstream. Delete `bblocks-config-local.yml` (or the relevant mapping) to go back to
 the published registers.
 
