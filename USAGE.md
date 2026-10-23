@@ -279,6 +279,38 @@ docker run -it --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" \
   we use the local `http://localhost:9090/register/` URL to make the output **compatible with the
   viewer** when running locally (see below). If omitted, the value will be autodetected from the repository
   metadata.
+* `build.sh` only passes `-it` to Docker when run from a terminal, so permission prompts (for transforms and
+  plugins) can be answered. From scripts, CI or coding agents, add `--skip-permissions true` instead.
+* Any extra arguments are passed on to the postprocessor, e.g. `./build.sh --filter my.bblock.id`.
+  `build-devel.sh` runs the same build with the rolling `develop` image of the postprocessor.
+
+#### Developing against a local version of an imported register
+
+To test changes to a register that this one imports (directly or through other registers) before they are
+published:
+
+1. In the **upstream** checkout, run `./build-local.sh`. It builds into `build-local/` like `build.sh`, but
+   with the register's public base URL (autodetected from the git remote) instead of the viewer URL, so that
+   other registers can consume the output. When working on a fork, pass the original register's URL:
+   `./build-local.sh --base-url https://opengeospatial.github.io/upstream-register/`.
+2. In **this** repository, create `bblocks-config-local.yml` mapping the upstream's public URL to a local
+   path, and a `.volumes` file mounting the upstream checkout at that path (both are ignored by git):
+
+   ```yaml
+   url-mappings:
+     'https://opengeospatial.github.io/upstream-register/': '/imports/upstream-register'
+   ```
+
+   ```
+   ../upstream-register:/imports/upstream-register
+   ```
+3. Run `./build.sh` as usual. The postprocessor picks up `build-local/register.json` from the mapped
+   checkout whenever it is newer than the published register.
+
+If the change is in a register imported *through* another one, rebuild each register in between with
+`./build-local.sh` too, and add a mapping and volume for every one of them: their published outputs were
+generated against the old upstream. Delete `bblocks-config-local.yml` (or the relevant mapping) to go back to
+the published registers.
 
 #### Building Blocks Viewer
 
