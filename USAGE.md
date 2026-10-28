@@ -113,9 +113,9 @@ Repository imports can be defined as an array of URLs to the output `register.js
 `bblocks-config.yaml`:
 
 * If `imports` is missing from `bblocks-config.yaml`, the
-  [main OGC Building Blocks repository](http://blocks.ogc.org/register.html) will be imported by default.
+  [main OGC Building Blocks repository](https://opengeospatial.github.io/bblocks/register.json) will be imported by default.
 * `default` can be used instead of a URL to refer to the
-  [main OGC Building Blocks repository](http://blocks.ogc.org/register.html). 
+  [main OGC Building Blocks repository](https://opengeospatial.github.io/bblocks/register.json). 
 * If `imports` is an empty array, no repositories will be imported.
 
 For example, the following will import two repositories, one of them being the main OGC Building Blocks repository:
@@ -212,13 +212,13 @@ types of validations:
 
 Inside the `tests` directory, 3 types of files will be processed:
 
-- `*.ttl`: [Turtle](https://www.w3.org/TR/turtle/) RDF files that will be validated against the SHACL rules.
-    - SHACL rules are loaded from the `shaclRules` property inside `bblock.json`. If a `rules.shacl` file is found
+- `*.ttl`: [Turtle](https://www.w3.org/TR/turtle/) RDF files that will be validated against the SHACL shapes.
+    - SHACL shapes are loaded from the `shaclShapes` property inside `bblock.json`. If a `shapes.shacl` file is found
       in the Building Block directory it will be used by default. **SHACL files must be serialized as Turtle**.
 - `*.jsonld`: JSON-LD files that will be first validated against the Building Block JSON Schema
-  and then against the SHACL rules.
+  and then against the SHACL shapes.
 - `*.json`: JSON files that will be first validated against the JSON Schema, then "semantically uplifted"
-  by embedding the Building Block's `context.jsonld`, and finally validated against the SHACL rules.
+  by embedding the Building Block's `context.jsonld`, and finally validated against the SHACL shapes.
 
 If the filename for a test resource ends in `-fail` (e.g., `missing-id-fail.json`), validation will only pass
 if the test fails (JSON SCHEMA, SHACL shapes, etc.); this allows writing negative test cases.

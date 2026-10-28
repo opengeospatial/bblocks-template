@@ -1,6 +1,6 @@
 # OGC Building Block template
 
-This template provides a working example of an [OGC Building Block](https:blocks.ogc.org). For more info see [the Documentation](https://ogcincubator.github.io/bblocks-docs/).
+This template provides a working example of an [OGC Building Block](https://opengeospatial.github.io/bblocks/register/). For more info see [the Documentation](https://ogcincubator.github.io/bblocks-docs/).
 
 This template is a working automation recipe to define, test and document a set of Building Blocks.
 
