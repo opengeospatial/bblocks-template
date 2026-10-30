@@ -1,5 +1,12 @@
-build-local/
-.idea/
-bblocks-config-local.yml
-bblocks-config-local.yaml
+# Local builds (build.sh writes build-local/; local exports often use build-local-export/)
+build-local*/
+bblocks-config-local*.yml
+bblocks-config-local*.yaml
 .volumes
+
+# Editors and tools
+.idea/
+.vscode/
+.ipynb_checkpoints/
+__pycache__/
+.claude/settings.local.json

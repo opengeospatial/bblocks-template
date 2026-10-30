@@ -1,3 +1,8 @@
 # Shell scripts must always be checked out with LF line endings so they run
 # correctly under bash (including WSL and Docker on Windows), regardless of core.autocrlf.
 *.sh text eol=lf
+
+# Markdown is stored with LF line endings and checked out with the platform's native
+# line endings (CRLF on Windows when core.autocrlf is true), so editors on any platform
+# do not produce whole-file line-ending diffs.
+*.md text=auto
