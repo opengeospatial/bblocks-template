@@ -14,6 +14,10 @@ examples:
     ## Base URI for semantic uplift
     base-uri: http://example.com/features/
 
+    ## Set to true if semantic uplift is expected to produce no RDF triples (e.g. a bare {"@id": "..."}
+    ## reference): the empty graph is then reported as a warning instead of an error
+    # allow-empty-graph: true
+
     ## The example can define its own prefixes, that will be merged with the global ones
     # prefixes:
     #   ex: http://example.com/

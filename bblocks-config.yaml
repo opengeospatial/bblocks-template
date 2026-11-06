@@ -69,6 +69,14 @@ schema-oas30-downcompile: False
 #   resources:                              # Additional resources to upload apart from building block metadata
 #      ontologies: true                     #   Whether to upload ontology files to the triplestore
 
+# SHACL validation settings (optional)
+#
+# shacl:
+#   allow-warnings: true    # If true (the default), SHACL results with sh:Warning or sh:Info severity are shown
+#                           #  in the validation reports (marked as warnings) but do not fail the building block;
+#                           #  only sh:Violation results fail it. Set to false to make any result fail.
+#                           #  Note: a "-fail" test that only triggers warnings will then be reported as failed.
+
 # External transformer/validator plugins (optional)
 #   Each entry installs its pip dependencies into a sandbox and imports the given modules,
 #   which are scanned for plugin classes. Unless the postprocessor is run with
