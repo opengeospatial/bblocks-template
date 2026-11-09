@@ -38,6 +38,12 @@ Building Blocks can be reused by either:
 9. Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
    to "GitHub Actions".
 
+   Alternatively, the site can be published to a branch (`gh-pages`) instead, which keeps build output out
+   of your source branch: set `deploy: {mode: branch}` in `bblocks-config.yaml` (see the
+   [documentation](https://ogcincubator.github.io/bblocks-docs/build/github#publishing-to-a-branch)) and, once the first workflow run
+   has created the `gh-pages` branch, set "Source" to "Deploy from a branch", with branch `gh-pages` and
+   folder `/ (root)`. The `build/` directory is then not committed to your source branch.
+
 Note: building blocks subdirectories can be grouped inside other directories, like so:
 
 ```
